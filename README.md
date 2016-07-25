@@ -2,4 +2,4 @@
 
 * [Armstrong](Armstrong)
 * [Fibonacci](Fibonacci)
-* [Fibonacci](StringReverse)
+* [StringReverse](StringReverse)
