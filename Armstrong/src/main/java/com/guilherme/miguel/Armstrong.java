@@ -1,0 +1,26 @@
+package com.guilherme.miguel;
+
+/**
+ * @author Miguel Guilherme
+ */
+public class Armstrong {
+
+    /**
+     * Check if a number is Armstrong
+     *
+     * @param number number to check if Armstrong
+     * @return true if Armstrong, false otherwise
+     */
+    public static boolean isArmstrong(int number) {
+        int length = String.valueOf(number).length();
+        int sum = 0;
+
+        for (int i = 0; i < length; i++) {
+            int digit = Integer.parseInt(String.valueOf(Integer.toString(number).charAt(i)));
+            sum += Math.pow(digit, length);
+        }
+
+        return number == sum;
+    }
+
+}
