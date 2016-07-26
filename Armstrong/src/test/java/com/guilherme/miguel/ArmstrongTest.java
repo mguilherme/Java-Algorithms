@@ -3,6 +3,7 @@ package com.guilherme.miguel;
 import org.junit.Before;
 import org.junit.Test;
 
+import static com.guilherme.miguel.Armstrong.isArmstrong;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -18,26 +19,26 @@ public class ArmstrongTest {
 
     @Test
     public void checkArmstrongFalse() throws Exception {
-        assertThat(Armstrong.isArmstrong(100), is(equalTo(false)));
+        assertThat(isArmstrong(100), is(equalTo(false)));
     }
 
     @Test
     public void checkArmstrongFirst() throws Exception {
-        assertThat(Armstrong.isArmstrong(153), is(equalTo(true)));
+        assertThat(isArmstrong(153), is(equalTo(true)));
     }
 
     @Test
     public void checkArmstrongSecond() throws Exception {
-        assertThat(Armstrong.isArmstrong(371), is(equalTo(true)));
+        assertThat(isArmstrong(371), is(equalTo(true)));
     }
 
     @Test
     public void checkArmstrongThird() throws Exception {
-        assertThat(Armstrong.isArmstrong(9474), is(equalTo(true)));
+        assertThat(isArmstrong(9474), is(equalTo(true)));
     }
 
     @Test
     public void checkArmstrongFourth() throws Exception {
-        assertThat(Armstrong.isArmstrong(54748), is(equalTo(true)));
+        assertThat(isArmstrong(54748), is(equalTo(true)));
     }
 }

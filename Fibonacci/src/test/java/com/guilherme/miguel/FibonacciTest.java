@@ -4,6 +4,8 @@ package com.guilherme.miguel;
 import org.junit.Before;
 import org.junit.Test;
 
+import static com.guilherme.miguel.Fibonacci.fibonacciIterative;
+import static com.guilherme.miguel.Fibonacci.fibonacciRecursive;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -23,7 +25,7 @@ public class FibonacciTest {
     public void testIterative() throws Exception {
         String output = "";
         for (int i = 0; i < 15; i++) {
-            output += Fibonacci.fibonacciRecursive(i) + " ";
+            output += fibonacciRecursive(i) + " ";
         }
         output = output.trim();
 
@@ -34,7 +36,7 @@ public class FibonacciTest {
     public void testRecursive() throws Exception {
         String output = "";
         for (int i = 0; i < 15; i++) {
-            output += Fibonacci.fibonacciIterative(i) + " ";
+            output += fibonacciIterative(i) + " ";
         }
         output = output.trim();
 
