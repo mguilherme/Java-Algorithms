@@ -1,10 +1,13 @@
 .settings
 .classpath
 .project
-.gradle
+.gradle/
 bin
 build
 target
 .springBeans
 .idea
 *.iml
+classes/
+
+
