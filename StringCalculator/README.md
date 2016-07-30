@@ -23,3 +23,4 @@ The following is a **TDD** exercise in coding, refactoring and test-first, that 
     **"/[delimiter]\n[numbers…]"** for example **"//;\n1;2"** should return three where the default delimiter is **';'**.
     2. the first line is optional. all existing scenarios should still be supported
 5. Calling Add with a negative number will throw an exception "negatives not allowed" - and the negative that was passed.if there are multiple negatives, show all of them in the exception message
+6. Numbers bigger than 1000 should be ignored, so adding 2 + 1001  = 2
