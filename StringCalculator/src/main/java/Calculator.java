@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -9,18 +11,24 @@ public class Calculator {
     public static int add(String numbers) throws Exception {
         if (numbers.isEmpty()) return 0;
 
-        String[] splittedNumbers = splitNumbers(numbers);
+        String[] numbersArr = splitNumbers(numbers);
 
-        checkNegatives(splittedNumbers);
+        checkNegatives(numbersArr);
 
-        return Stream.of(splittedNumbers)
+        return Stream.of(numbersArr)
                 .mapToInt(Integer::parseInt)
                 .filter(n -> n <= 1000)
                 .sum();
     }
 
+    /**
+     * Split numbers from a given expression
+     *
+     * @param expression the expression
+     * @return an array of strings
+     */
     private static String[] splitNumbers(String expression) {
-        String delimiter = ",|\n";
+        String delimiter = ",|\n"; // Default delimiter
         if (expression.startsWith("//")) {
             String[] numbersExpression = expression.split("\n");
 
@@ -37,11 +45,12 @@ public class Calculator {
      * @throws Exception
      */
     private static void checkNegatives(String[] numbers) throws Exception {
-        int[] negatives = Stream.of(numbers)
+        List<Integer> negativeNumbers = Stream.of(numbers)
                 .mapToInt(Integer::parseInt)
                 .filter(n -> n < 0)
-                .toArray();
+                .boxed()
+                .collect(Collectors.toList());
 
-        if (negatives.length != 0) throw new Exception("negatives not allowed: " + Arrays.toString(negatives));
+        if (!negativeNumbers.isEmpty()) throw new Exception("negatives not allowed: " + negativeNumbers);
     }
 }
