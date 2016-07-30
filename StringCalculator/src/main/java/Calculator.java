@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 /**
@@ -36,7 +37,7 @@ public class Calculator {
         List<String> list = Arrays.asList(expression.split(delimiter));
 
         return list.stream()
-                .filter(s -> (s != null && !s.isEmpty()))
+                .filter(((Predicate<String>) String::isEmpty).negate())
                 .collect(Collectors.toList());
     }
 
