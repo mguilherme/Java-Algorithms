@@ -72,4 +72,5 @@ public class CalculatorTest {
 //    public void testWithBigDelimiterWorks() throws Exception {
 //        assertThat(Calculator.add("//[***]\n1***2***3"), is(equalTo(6)));
 //    }
+
 }

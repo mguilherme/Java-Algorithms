@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -31,7 +30,6 @@ public class Calculator {
         String delimiter = ",|\n"; // Default delimiter
         if (expression.startsWith("//")) {
             String[] numbersExpression = expression.split("\n");
-
             delimiter = numbersExpression[0].substring(numbersExpression[0].lastIndexOf("/") + 1);
             expression = numbersExpression[1];
         }
@@ -53,4 +51,5 @@ public class Calculator {
 
         if (!negativeNumbers.isEmpty()) throw new Exception("negatives not allowed: " + negativeNumbers);
     }
+
 }
