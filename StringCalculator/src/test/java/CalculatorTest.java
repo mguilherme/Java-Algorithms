@@ -68,9 +68,9 @@ public class CalculatorTest {
         assertThat(Calculator.add("2,1001"), is(equalTo(2)));
     }
 
-//    @Test
-//    public void testWithBigDelimiterWorks() throws Exception {
-//        assertThat(Calculator.add("//[***]\n1***2***3"), is(equalTo(6)));
-//    }
+    @Test
+    public void testWithBigDelimiterWorks() throws Exception {
+        assertThat(Calculator.add("//[***]\n1***2***3"), is(equalTo(6)));
+    }
 
 }

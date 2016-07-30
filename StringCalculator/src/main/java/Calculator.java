@@ -1,6 +1,6 @@
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * @author Miguel Guilherme
@@ -10,11 +10,10 @@ public class Calculator {
     public static int add(String numbers) throws Exception {
         if (numbers.isEmpty()) return 0;
 
-        String[] numbersArr = splitNumbers(numbers);
+        List<String> numbersList = splitNumbers(numbers);
+        checkNegatives(numbersList);
 
-        checkNegatives(numbersArr);
-
-        return Stream.of(numbersArr)
+        return numbersList.stream()
                 .mapToInt(Integer::parseInt)
                 .filter(n -> n <= 1000)
                 .sum();
@@ -26,14 +25,19 @@ public class Calculator {
      * @param expression the expression
      * @return an array of strings
      */
-    private static String[] splitNumbers(String expression) {
+    private static List<String> splitNumbers(String expression) {
         String delimiter = ",|\n"; // Default delimiter
         if (expression.startsWith("//")) {
             String[] numbersExpression = expression.split("\n");
             delimiter = numbersExpression[0].substring(numbersExpression[0].lastIndexOf("/") + 1);
             expression = numbersExpression[1];
         }
-        return expression.split(delimiter);
+
+        List<String> list = Arrays.asList(expression.split(delimiter));
+
+        return list.stream()
+                .filter(s -> (s != null && !s.isEmpty()))
+                .collect(Collectors.toList());
     }
 
     /**
@@ -42,8 +46,8 @@ public class Calculator {
      * @param numbers numbers to check if contains negatives
      * @throws Exception
      */
-    private static void checkNegatives(String[] numbers) throws Exception {
-        List<Integer> negativeNumbers = Stream.of(numbers)
+    private static void checkNegatives(List<String> numbers) throws Exception {
+        List<Integer> negativeNumbers = numbers.stream()
                 .mapToInt(Integer::parseInt)
                 .filter(n -> n < 0)
                 .boxed()
