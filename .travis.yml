@@ -1,0 +1,12 @@
+language: java
+script:
+  - cd Armstrong && mvn test
+  - cd ../Fibonacci && mvn test
+  - cd ../prime-number && mvn test
+  - cd ../StringCalculator && mvn test
+  - cd ../StringReverse && mvn test
+jdk: oraclejdk8
+notifications:
+  email:
+    - mguilherme82@gmail.com
+
