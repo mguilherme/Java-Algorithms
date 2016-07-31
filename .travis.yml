@@ -5,6 +5,7 @@ script:
   - cd ../prime-number && ./gradlew test
   - cd ../StringCalculator && ./gradlew test
   - cd ../StringReverse && mvn test
+  - cd ../PasswordVerifier && ./gradlew test
 jdk: oraclejdk8
 notifications:
   email:
