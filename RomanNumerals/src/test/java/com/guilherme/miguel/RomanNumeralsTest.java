@@ -76,7 +76,7 @@ public class RomanNumeralsTest {
 
     @Test
     public void NumeralToRomanTest() {
-        assertThat(RomanNumeral.convert(numeral), is(equalTo(roman)));
+        assertThat(RomanNumeral.convert(numeral), is(roman));
     }
 
 }
