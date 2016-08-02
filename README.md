@@ -3,6 +3,7 @@
 * [Armstrong](Armstrong)
 * [Fibonacci](Fibonacci)
 * [PasswordVerifier](PasswordVerifier)
+* [RomanNumerals](RomanNumerals)
 * [StringCalculator](StringCalculator)
 * [StringReverse](StringReverse)
 * [PrimeNumber](prime-number)
