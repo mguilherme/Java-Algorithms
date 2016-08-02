@@ -69,8 +69,13 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testWithBigDelimiterWorks() throws Exception {
+    public void testWithBigDelimiter() throws Exception {
         assertThat(Calculator.add("//[***]\n1***2***3"), is(equalTo(6)));
+    }
+
+    @Test
+    public void testWithMultipleDelimiter() throws Exception {
+        assertThat(Calculator.add("//[*][%]\n1*2%3"), is(equalTo(6)));
     }
 
 }

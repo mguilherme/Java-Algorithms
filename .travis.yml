@@ -6,6 +6,7 @@ script:
   - cd ../StringCalculator && ./gradlew test
   - cd ../StringReverse && mvn test
   - cd ../PasswordVerifier && ./gradlew test
+  - cd ../RomanNumerals && ./gradlew test
 jdk: oraclejdk8
 notifications:
   email:
