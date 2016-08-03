@@ -1,14 +1,15 @@
 language: java
 script:
-  - cd Armstrong && mvn test
-  - cd ../Fibonacci && mvn test
-  - cd ../prime-number && ./gradlew test
-  - cd ../StringCalculator && ./gradlew test
-  - cd ../StringReverse && mvn test
-  - cd ../PasswordVerifier && ./gradlew test
-  - cd ../RomanNumerals && ./gradlew test
+  - sh -c 'cd Armstrong && mvn test'
+  - sh -c 'cd Fibonacci && mvn test'
+  - sh -c 'cd prime-number && ./gradlew test'
+  - sh -c 'cd StringCalculator && ./gradlew test'
+  - sh -c 'cd StringReverse && mvn test'
+  - sh -c 'cd PasswordVerifier && ./gradlew test'
+  - sh -c 'cd RomanNumerals && ./gradlew test'
 jdk: oraclejdk8
 notifications:
   email:
     - mguilherme82@gmail.com
+
 
