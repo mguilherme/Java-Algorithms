@@ -1,5 +1,7 @@
 package com.guilherme.miguel;
 
+import java.util.stream.IntStream;
+
 /**
  * @author Miguel Guilherme
  */
@@ -16,7 +18,7 @@ public class Armstrong {
         int sum = 0;
 
         for (int i = 0; i < length; i++) {
-            int digit = Integer.parseInt(String.valueOf(Integer.toString(number).charAt(i)));
+            int digit = Character.getNumericValue(Integer.toString(number).charAt(i));
             sum += Math.pow(digit, length);
         }
 
