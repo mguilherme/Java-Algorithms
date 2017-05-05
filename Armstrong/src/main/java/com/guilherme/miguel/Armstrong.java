@@ -1,7 +1,5 @@
 package com.guilherme.miguel;
 
-import java.util.stream.IntStream;
-
 /**
  * @author Miguel Guilherme
  */
