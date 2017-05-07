@@ -3,13 +3,13 @@ package com.guilherme.miguel;
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.guilherme.miguel.Armstrong.isArmstrong;
+import static com.guilherme.miguel.ArmstrongFunctional.isArmstrong;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author Miguel Guilherme
  */
-public class ArmstrongTest {
+public class ArmstrongFunctionalTest {
 
     @Before
     public void setUp() throws Exception {
