@@ -1,14 +1,11 @@
 package com.guilherme.miguel;
 
 
-import org.junit.Before;
 import org.junit.Test;
 
 import static com.guilherme.miguel.Fibonacci.fibonacciIterative;
 import static com.guilherme.miguel.Fibonacci.fibonacciRecursive;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author Miguel Guilherme
@@ -16,10 +13,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class FibonacciTest {
 
     public final static String EXPECTED = "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377";
-
-    @Before
-    public void setUp() throws Exception {
-    }
 
     @Test
     public void testIterative() throws Exception {
@@ -29,7 +22,7 @@ public class FibonacciTest {
         }
         output = output.trim();
 
-        assertThat(output, is(equalTo(EXPECTED)));
+        assertThat(output).isEqualTo(EXPECTED);
     }
 
     @Test
@@ -40,6 +33,6 @@ public class FibonacciTest {
         }
         output = output.trim();
 
-        assertThat(output, is(equalTo(EXPECTED)));
+        assertThat(output).isEqualTo(EXPECTED);
     }
 }
