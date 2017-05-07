@@ -11,10 +11,6 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 public class ArmstrongFunctionalTest {
 
-    @Before
-    public void setUp() throws Exception {
-    }
-
     @Test
     public void checkArmstrongFalse() throws Exception {
         assertThat(isArmstrong(100)).isFalse();
