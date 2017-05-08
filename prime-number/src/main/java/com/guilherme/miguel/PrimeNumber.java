@@ -1,12 +1,19 @@
 package com.guilherme.miguel;
 
+import java.util.stream.IntStream;
+
 /**
  * @author Miguel Guilherme
  */
 public class PrimeNumber {
 
     public static boolean isPrime(int number) {
-        if(number < 2) {
+        return number >= 2 && IntStream.rangeClosed(2, number / 2)
+                .noneMatch(i -> number % i == 0);
+    }
+
+    public static boolean isPrimeImperative(int number) {
+        if (number < 2) {
             return false;
         }
 

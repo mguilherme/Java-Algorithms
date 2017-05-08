@@ -1,78 +1,73 @@
 package com.guilherme.miguel;
 
-import org.junit.Before;
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static com.guilherme.miguel.PrimeNumber.isPrime;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author Miguel Guilherme
  */
 public class PrimeNumberTest {
 
-    @Before
-    public void setUp() throws Exception {
-    }
-
     @Test
     public void checkZeroIsNotPrimeTest() throws Exception {
-        assertThat(PrimeNumber.isPrime(0), is(false));
+        assertThat(isPrime(0)).isFalse();
     }
 
     @Test
     public void checkOneIsNotPrimeTest() throws Exception {
-        assertThat(PrimeNumber.isPrime(1), is(false));
+        assertThat(isPrime(1)).isFalse();
     }
 
     @Test
     public void checkTwoIsPrimeTest() throws Exception {
-        assertThat(PrimeNumber.isPrime(2), is(true));
+        assertThat(isPrime(2)).isTrue();
     }
 
     @Test
     public void checkThreeIsPrimeTest() throws Exception {
-        assertThat(PrimeNumber.isPrime(3), is(true));
+        assertThat(isPrime(3)).isTrue();
     }
 
     @Test
     public void checkFourIsNotPrimeTest() throws Exception {
-        assertThat(PrimeNumber.isPrime(4), is(false));
+        assertThat(isPrime(4)).isFalse();
     }
 
     @Test
     public void checkFiveIsPrimeTest() throws Exception {
-        assertThat(PrimeNumber.isPrime(5), is(true));
+        assertThat(isPrime(5)).isTrue();
     }
 
     @Test
     public void checkSixIsNotPrimeTest() throws Exception {
-        assertThat(PrimeNumber.isPrime(6), is(false));
+        assertThat(isPrime(6)).isFalse();
     }
 
     @Test
     public void checkSevenIsPrimeTest() throws Exception {
-        assertThat(PrimeNumber.isPrime(7), is(true));
+        assertThat(isPrime(7)).isTrue();
     }
 
     @Test
     public void checkEightIsNotPrimeTest() throws Exception {
-        assertThat(PrimeNumber.isPrime(8), is(false));
+        assertThat(isPrime(8)).isFalse();
     }
 
     @Test
     public void checkNineIsNotPrimeTest() throws Exception {
-        assertThat(PrimeNumber.isPrime(9), is(false));
+        assertThat(isPrime(9)).isFalse();
     }
 
     @Test
     public void checkTenIsNotPrimeTest() throws Exception {
-        assertThat(PrimeNumber.isPrime(10), is(false));
+        assertThat(isPrime(10)).isFalse();
     }
 
     @Test
     public void checkElevenIsPrimeTest() throws Exception {
-        assertThat(PrimeNumber.isPrime(11), is(true));
+        assertThat(isPrime(11)).isTrue();
     }
 
 }
