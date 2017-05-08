@@ -7,12 +7,12 @@ import java.util.stream.IntStream;
  */
 public class PrimeNumber {
 
-    public static boolean isPrime(int number) {
+    public static boolean isPrimeFunctional(int number) {
         return number >= 2 && IntStream.rangeClosed(2, number / 2)
                 .noneMatch(i -> number % i == 0);
     }
 
-    public static boolean isPrimeImperative(int number) {
+    public static boolean isPrime(int number) {
         if (number < 2) {
             return false;
         }
