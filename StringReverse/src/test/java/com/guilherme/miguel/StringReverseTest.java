@@ -1,51 +1,44 @@
 package com.guilherme.miguel;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import static com.guilherme.miguel.StringReverse.reverse;
 import static com.guilherme.miguel.StringReverse.reverseRecursively;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.not;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * @author Miguel Guilherme
  */
 public class StringReverseTest {
 
-    @Before
-    public void setUp() throws Exception {
-    }
-
     @Test
     public void checkWord1() throws Exception {
-        assertThat(reverse("Hello"), is(equalTo("olleH")));
+        assertThat(reverse("Hello")).isEqualTo("olleH");
     }
 
     @Test
     public void checkWord2() throws Exception {
-        assertThat(reverse("Java"), is(equalTo("avaJ")));
+        assertThat(reverse("Java")).isEqualTo("avaJ");
     }
 
     @Test
     public void checkFalseWord1() throws Exception {
-        assertThat(reverse("World"), is(not("ldrWo")));
+        assertThat(reverse("World")).isNotEqualTo("ldrWo");
     }
 
     @Test
     public void checkWordRecursively1() throws Exception {
-        assertThat(reverseRecursively("Hello"), is(equalTo("olleH")));
+        assertThat(reverseRecursively("Hello")).isEqualTo("olleH");
     }
 
     @Test
     public void checkWordRecursively2() throws Exception {
-        assertThat(reverseRecursively("Java"), is(equalTo("avaJ")));
+        assertThat(reverseRecursively("Java")).isEqualTo("avaJ");
     }
 
     @Test
     public void checkFalseWordRecursively1() throws Exception {
-        assertThat(reverseRecursively("World"), is(not("ldrWo")));
+        assertThat(reverseRecursively("World")).isNotEqualTo("ldrWo");
     }
+
 }
