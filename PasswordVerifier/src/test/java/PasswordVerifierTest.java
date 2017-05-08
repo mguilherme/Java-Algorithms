@@ -1,4 +1,3 @@
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -10,10 +9,6 @@ public class PasswordVerifierTest {
 
     @Rule
     public ExpectedException thrown = ExpectedException.none();
-
-    @Before
-    public void setUp() throws Exception {
-    }
 
     @Test
     public void shouldThrowExceptionIfNotLargerThanEightChars() throws Exception {
