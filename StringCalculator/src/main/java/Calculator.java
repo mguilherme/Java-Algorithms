@@ -34,9 +34,7 @@ public class Calculator {
             expression = numbersExpression[1];
         }
 
-        List<String> list = Arrays.asList(expression.split(delimiter));
-
-        return list.stream()
+        return Arrays.asList(expression.split(delimiter)).stream()
                 .filter(((Predicate<String>) String::isEmpty).negate())
                 .collect(Collectors.toList());
     }
