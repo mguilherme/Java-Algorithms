@@ -1,7 +1,5 @@
 package com.guilherme.miguel;
 
-import java.util.stream.IntStream;
-
 /**
  * @author Miguel Guilherme
  */
@@ -31,10 +29,7 @@ public class StringReverse {
      * @return a reversed string
      */
     public static String reverseRecursively(String str) {
-        if (str.length() < 2) {
-            return str;
-        }
-        return reverseRecursively(str.substring(1)) + str.charAt(0);
+        return (str.length() < 2) ? str : reverseRecursively(str.substring(1)) + str.charAt(0);
     }
 
 }
