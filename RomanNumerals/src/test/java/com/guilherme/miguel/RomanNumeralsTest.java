@@ -7,9 +7,7 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.runners.Parameterized.Parameter;
 import static org.junit.runners.Parameterized.Parameters;
 
@@ -70,13 +68,12 @@ public class RomanNumeralsTest {
                 {1000, "M"},
                 {2000, "MM"},
                 {3000, "MMM"}
-
         });
     }
 
     @Test
     public void NumeralToRomanTest() {
-        assertThat(RomanNumeral.convert(numeral), is(roman));
+        assertThat(RomanNumeral.convert(numeral)).isEqualTo(roman);
     }
 
 }
