@@ -2,9 +2,10 @@ language: java
 script:
   - sh -c 'cd Armstrong && mvn test'
   - sh -c 'cd Fibonacci && mvn test'
+  - sh -c 'cd StringReverse && mvn test'
+  - sh -c 'cd ReversePolishNotation && mvn test'
   - sh -c 'cd prime-number && ./gradlew test'
   - sh -c 'cd StringCalculator && ./gradlew test'
-  - sh -c 'cd StringReverse && mvn test'
   - sh -c 'cd PasswordVerifier && ./gradlew test'
   - sh -c 'cd RomanNumerals && ./gradlew test'
 jdk: oraclejdk8
