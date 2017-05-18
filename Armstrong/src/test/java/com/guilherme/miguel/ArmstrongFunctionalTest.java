@@ -1,6 +1,5 @@
 package com.guilherme.miguel;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import static com.guilherme.miguel.ArmstrongFunctional.isArmstrong;

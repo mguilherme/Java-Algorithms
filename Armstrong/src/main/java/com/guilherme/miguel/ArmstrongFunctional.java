@@ -16,7 +16,8 @@ public class ArmstrongFunctional {
 
         return number == value.chars()
                 .map(c -> Character.getNumericValue((char) c))
-                .reduce(0, (a, b) -> Integer.sum(a, (int) Math.pow(b, value.length())));
+                .map(digit -> (int) Math.pow(digit, value.length()))
+                .sum();
     }
 
 }
